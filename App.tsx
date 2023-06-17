@@ -5,9 +5,9 @@ import {PersistQueryClientProvider} from '@tanstack/react-query-persist-client';
 import {createAsyncStoragePersister} from '@tanstack/query-async-storage-persister';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import Pagination from './src/screens/Pagination';
-import TabBar from './src/components/TabBar';
 import Infinity from './src/screens/Infinity';
 
 const queryClient = new QueryClient({
@@ -29,16 +29,26 @@ const Root = () => (
     <PersistQueryClientProvider
       client={queryClient}
       persistOptions={{persister: asyncStoragePersister}}>
-      <Tab.Navigator>
+      <Tab.Navigator screenOptions={{tabBarShowLabel: false}}>
         <Tab.Screen
           name="Pagination"
           component={Pagination}
-          options={{title: 'Pagination'}}
+          options={{
+            title: 'Pagination',
+            tabBarIcon: ({color, size}) => (
+              <Icon name="book-open-page-variant" color={color} size={size} />
+            ),
+          }}
         />
         <Tab.Screen
           name="Infinite"
           component={Infinity}
-          options={{title: 'Infinite scrolling'}}
+          options={{
+            title: 'Infinite scrolling',
+            tabBarIcon: ({color, size}) => (
+              <Icon name="infinity" color={color} size={size} />
+            ),
+          }}
         />
       </Tab.Navigator>
     </PersistQueryClientProvider>
