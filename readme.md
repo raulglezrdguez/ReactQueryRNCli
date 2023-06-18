@@ -8,6 +8,6 @@ App developed with react navigation and @tanstack/react-query.
 
 ![pagination](/screenshots/Screen%20Shot%202023-06-17%20at%2018.39.42.jpg)
 
-## Infinite Scroll
+## Infinite Scrolling
 
-![infinitescroll](/screenshots/)
+![infinitescroll](/screenshots/Screen%20Shot%202023-06-18%20at%2011.29.30.jpg)

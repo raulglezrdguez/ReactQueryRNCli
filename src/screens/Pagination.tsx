@@ -19,7 +19,7 @@ const Main = () => {
 
   const {isLoading, isError, data, error, isFetching} = useQuery({
     queryKey: ['data', page],
-    queryFn: getData(page),
+    queryFn: () => getData({pageParam: page}),
     keepPreviousData: true,
   });
 
