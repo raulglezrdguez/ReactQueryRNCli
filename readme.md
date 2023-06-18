@@ -1,6 +1,7 @@
 # React query with react native cli
 
 App developed with react navigation and @tanstack/react-query.
+With async storage persister functionality.
 
 # Images
 
